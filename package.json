@@ -1,7 +1,8 @@
 {
-  "name": "react-native-video-controls",
-  "version": "2.0.0",
-  "description": "A set of GUI controls for the react-native-video component",
+  "name": "awesome-react-native-video-controls",
+  "version": "1.0.0",
+  "description":
+    "Editting some controls of react-native-video-controls and improve its functionality",
   "license": "MIT",
   "main": "VideoPlayer.js",
   "keywords": [
@@ -13,10 +14,10 @@
   "scripts": {
     "test": "echo \"No test specified\" && exit 1"
   },
-  "author": "Nubix (https://github.com/itsnubix)",
+  "author": "Shahryar (https://github.com/sh-soltanpour)",
   "repository": {
     "type": "git",
-    "url": "git@github.com:itsnubix/react-native-video-controls.git"
+    "url": "git@github.com:sh-soltanpour/react-native-video-controls.git"
   },
   "dependencies": {
     "lodash": "^4.16.4"
