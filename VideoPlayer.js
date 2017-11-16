@@ -695,13 +695,13 @@ export default class VideoPlayer extends Component {
              * If we go to 0 then turn on the mute prop
              * to avoid that weird static-y sound.
              */
+
       onPanResponderMove: (evt, gestureState) => {
         let state = this.state;
         const position = this.state.volumeOffset + gestureState.dx;
 
         this.setVolumePosition(position);
         state.volume = this.calculateVolumeFromVolumePosition();
-
         if (state.volume <= 0.046666667) {
           state.muted = true;
         } else {
@@ -843,9 +843,9 @@ export default class VideoPlayer extends Component {
      */
   renderFullscreen() {
     let source =
-      this.state.isFullscreen === true
-        ? require('./assets/img/shrink.png')
-        : require('./assets/img/expand.png');
+      this.props.isFullscreen === true
+        ? require('./assets/img/my_shrink.png')
+        : require('./assets/img/my_expand.png');
     return this.renderControl(
       <Image source={source} />,
       this.methods.toggleFullscreen,
