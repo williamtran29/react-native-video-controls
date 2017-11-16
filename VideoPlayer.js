@@ -702,7 +702,7 @@ export default class VideoPlayer extends Component {
         this.setVolumePosition(position);
         state.volume = this.calculateVolumeFromVolumePosition();
 
-        if (state.volume <= 0) {
+        if (state.volume <= 0.046666667) {
           state.muted = true;
         } else {
           state.muted = false;
