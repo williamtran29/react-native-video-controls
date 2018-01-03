@@ -756,9 +756,11 @@ export default class VideoPlayer extends Component {
     return (Math.floor(result * 10) / 10.0).toFixed(1);
   };
   showSubtitle() {
+    console.log('Here');
     if (!this.props.subtitle) return null;
+    console.log('Here2');
     if (!this.props.subtitle.content) return null;
-    let currentTime = this.state.currentTimeInDeciseconds;
+    let currentTime = this.state.currentTimeInDeciSeconds;
     let subtitleIndex = this.state.subtitleIndex;
     let subtitles = this.props.subtitle.content;
     let startTime = this.parseTimeStringToDeciSecond(
@@ -767,11 +769,13 @@ export default class VideoPlayer extends Component {
     let endTime = this.parseTimeStringToDeciSecond(
       subtitles[subtitleIndex].endTime
     );
+    console.log('Current Time', currentTime);
     if (currentTime > endTime)
       this.setState({ subtitleIndex: subtitleIndex + 1 });
-    if (currentTime < endTime && currentTime > startTime)
+    if (currentTime < endTime && currentTime > startTime) {
+      console.log('Returned value ', subtitles[subtitleIndex].text);
       return subtitles[subtitleIndex].text;
-    else return null;
+    } else return null;
   }
   /**End of Subtitle Part */
   /**
@@ -1070,7 +1074,16 @@ export default class VideoPlayer extends Component {
     return null;
   }
   renderSubtitle() {
-    <Text style={styles.player.subtitle}>{this.showSubtitle()}</Text>;
+    return (
+      <View
+        style={
+          this.props.isFullscreen
+            ? styles.player.subtitleContainerLandscape
+            : styles.player.subtitleContainerPortrait
+        }>
+        <Text style={styles.player.subtitle}>{this.showSubtitle()}</Text>
+      </View>
+    );
   }
 
   /**
@@ -1129,6 +1142,17 @@ const styles = {
       textShadowOffset: { width: 1, height: 1 },
       paddingRight: 10,
       paddingLeft: 10
+    },
+    subtitleContainerPortrait: {
+      position: 'absolute',
+      top: 200,
+      left: 100,
+      alignItems: 'center'
+    },
+    subtitleContainerLandscape: {
+      position: 'absolute',
+      bottom: 50,
+      left: 250
     },
     video: {
       overflow: 'hidden',
