@@ -2,9 +2,8 @@
 This package is forked from react-native-video-controls.
 Enhance functionality for react native video Controls available at [react-native-video-controls](https://github.com/react-native-community/react-native-video-controls)
 ## Features
-** SUBTITLE SUPPORT ADDED ** 
+**SUBTITLE SUPPORT ADDED** 
 In This package, you can pass a function as 'toggleFullscreen' prop to component to control the functionality of toggle fullscreen button.
-Showing subtitles on Video will be added soon ... 
 
 You can find other features in [react-native-video-controls] (https://github.com/react-native-community/react-native-video-controls)
 and [react-native-video](https://github.com/react-native-community/react-native-video) pages.
