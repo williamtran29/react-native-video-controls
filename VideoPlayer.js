@@ -756,24 +756,21 @@ export default class VideoPlayer extends Component {
     return (Math.floor(result * 10) / 10.0).toFixed(1);
   };
   showSubtitle() {
-    console.log('Here');
     if (!this.props.subtitle) return null;
-    console.log('Here2');
-    if (!this.props.subtitle.content) return null;
     let currentTime = this.state.currentTimeInDeciSeconds;
     let subtitleIndex = this.state.subtitleIndex;
-    let subtitles = this.props.subtitle.content;
+    let subtitles = this.props.subtitle;
+    if (!subtitles[subtitleIndex])
+      return null;
     let startTime = this.parseTimeStringToDeciSecond(
       subtitles[subtitleIndex].startTime
     );
     let endTime = this.parseTimeStringToDeciSecond(
       subtitles[subtitleIndex].endTime
     );
-    console.log('Current Time', currentTime);
     if (currentTime > endTime)
       this.setState({ subtitleIndex: subtitleIndex + 1 });
     if (currentTime < endTime && currentTime > startTime) {
-      console.log('Returned value ', subtitles[subtitleIndex].text);
       return subtitles[subtitleIndex].text;
     } else return null;
   }
