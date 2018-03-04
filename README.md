@@ -26,6 +26,20 @@ Then when you got the array of JSONs, you can pass this array to VideoPlayer as 
 />
 ```
 
+The subtitle prop expects the JSON to have the following key-value format:
+```javascript
+[{
+   "startTime": "00:00:04,123", //hh:mm:ss,SSS
+   "endTime": "00:00:05,001",
+   "text": "When you convert your subtitle file, you might need to modify your JSON"
+},
+{
+   "startTime": "00:00:08,008",
+   "endTime": "00:00:09,876",
+   "text": "Before passing it to the VidePlayer component"
+}]
+```
+
 ## OTHER FEATURES AND USAGE
 The `<VideoPlayer>` component can take a number of inputs to customize it as needed. They are outlined below:
 The `<VideoPlayer>` component follows the API of the `<Video>` component at [react-native-video](https://github.com/react-native-community/react-native-video) and [react-native-video-controls](https://github.com/react-native-community/react-native-video-controls)
