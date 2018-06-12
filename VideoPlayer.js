@@ -1253,7 +1253,9 @@ const styles = {
       flexDirection: 'row'
     },
     fullscreen: {
-      flexDirection: 'row'
+      flexDirection: 'row',
+      width: 60,
+      height: 60
     },
     playPause: {
       position: 'relative',
@@ -1299,9 +1301,6 @@ const styles = {
       height: 3
     },
     handle: {
-      position: 'absolute',
-      marginTop: -24,
-      marginLeft: -24,
       padding: 16
     }
   }),
@@ -1325,10 +1324,8 @@ const styles = {
       width: '100%'
     },
     handle: {
-      position: 'absolute',
-      marginLeft: -7,
-      height: 28,
-      width: 28
+      height: 36,
+      width: 36
     },
     circle: {
       borderRadius: 12,
