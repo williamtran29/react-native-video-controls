@@ -1275,7 +1275,7 @@ const styles = {
     timerText: {
       backgroundColor: 'transparent',
       color: '#FFF',
-      fontSize: 11,
+      fontSize: 15,
       textAlign: 'right'
     }
   }),
@@ -1291,12 +1291,12 @@ const styles = {
     },
     track: {
       backgroundColor: '#333',
-      height: 1,
+      height: 3,
       marginLeft: 7
     },
     fill: {
       backgroundColor: '#FFF',
-      height: 1
+      height: 3
     },
     handle: {
       position: 'absolute',
@@ -1314,14 +1314,14 @@ const styles = {
     },
     track: {
       backgroundColor: '#333',
-      height: 1,
+      height: 3,
       position: 'relative',
       top: 14,
       width: '100%'
     },
     fill: {
       backgroundColor: '#FFF',
-      height: 1,
+      height: 3,
       width: '100%'
     },
     handle: {
@@ -1333,10 +1333,11 @@ const styles = {
     circle: {
       borderRadius: 12,
       position: 'relative',
-      top: 8,
+      padding: 8,
+      top: 6,
       left: 8,
-      height: 12,
-      width: 12
+      height: 16,
+      width: 16
     }
   })
 };
